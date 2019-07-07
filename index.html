@@ -11,60 +11,59 @@
   
 <!--
 Code from:
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed
 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+    }
 
-.navbar {
+/* NAVBAR STYLES */
+.topnav {
   width: 100%;
-  background-color: #555;
-  overflow: auto;
+  background-color: #369;
+  overflow: hidden;
+
 }
 
-.navbar a {
+.topnav a {
   float: left;
+  color: #f2f2f2;
+  text-align: center;
   padding: 12px;
-  color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
-.navbar a:hover {
-  background-color: #000;
+.topnav a:hover {
+  background-color: #444;
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #258;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-  
+/* SIDEBAR STYLES */
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 126px;
   position: fixed;
   z-index: 1;
-  top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
+  background-color: #369;
+  padding-top: 10%;
+  margin: auto;
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 12px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 24px;
+  color: #505050;
   display: block;
 }
 
@@ -73,9 +72,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 126px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+  padding: 0px 12px;
 }
 
 @media screen and (max-height: 450px) {
@@ -83,28 +82,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
   .sidenav a {font-size: 18px;}
 }
 </style>
-</head>
-
 <body>
-
-<!-- Icon list: https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
-<div class="navbar">
-  <a class="active" href="https://irwinkhuu.github.io/"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="Irwin_Khuu_Resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
+<div class="topnav">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
 </div>
 
 <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
 </div>
-
+  
+<div class="main">
   <h1>Welcome, my name is <a href="https://www.linkedin.com/in/irwin-khuu/">Irwin Khuu</a>.</h1>
   <h2>About Me</h2>
   <p>I recently obtained a Master of Science degree in Statistical Sciences from the University of Toronto.</p>
   <p>I have a wide variety of academic interests in the field, particularly emphasizing Bayesian Inference, Monte Carlo Simulation and Spatial Analysis.</p>
-
+</div>
 </body>
 
 </html>
